@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Open+Sans:wght@300&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="collapsedbar.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabuzz</title>
+</head>
+<body class="container">
+    <header>
+        <div class="headerdiv">
+            <div class="logo">
+                <img id="logoid" src="logo7.svg" alt="logo">
+            </div>
+            <div class="banner">
+                <a href="http://127.0.0.1:5500/website.html" class="accueil">Accueil</a>
+                <a href="monprofil.org"class="liens">Profil</a>
+                <a href="Partenaires.org"class="liens">Partenaires</a>
+                <a href="boutique.org"class="liens">Boutique</a>
+                <a href="http://127.0.0.1:5500/apropos.html"class="liens">À propos</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="div1">
+            <div class="femmeblonde">
+                <img src="image1.jpg" id="img1">
+                <div class="qrinstallapp">
+                    <img src="qrcodeyt.svg" id="qr">
+                    <a id="installapp" href="#">Installer l'application</a>
+                </div>
+            </div>
+                <div class="sponsor">
+                <p class="txtsponsor">Nos Sponsors</p>
+                <img id="vik" src="vik.jpg" alt="sponsor VIK">
+                <div class="ncsb">
+                    <img id="nicoach" src="nicoach.jpg" alt="sponsor nicoach">
+                    <img id="soccerbook"src="soccerbook.jpg" alt="sponsor soccerbook">
+                </div>
+            </div>
+        </div>
+        <div class="div2">
+            <!--début js sidebar-->
+            <script src="collapsedbar.js"></script>
+            <div id="mySidebar" class="sidebar">
+                <h2 class="maps">Maps</h2>
+                <img src="xline.svg">
+                    <div class="trsprt">
+                        <div class="rndorg">
+                            <img src="pieton.svg" class="imgtrsprt">
+                        </div>
+                        <div class="rndorg">
+                            <img src="velo.svg" class="imgtrsprt">
+                        </div>
+                        <div class="rndorg">
+                            <img src="horaire.svg"class="imgtrsprt">
+                        </div>
+                        <div class="rndorg">
+                            <img src="train.svg"class="imgtrsprt">
+                        </div>
+                        <div class="rndorg">
+                            <img src="tram.svg"class="imgtrsprt">
+                        </div>
+                        <div class="rndorg">
+                            <img src="metro.svg"class="imgtrsprt">
+                        </div>
+                    </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sidebr"> 
+                    <img src="trajet.svg" class="imgicon">
+                    <a href="#">Vos trajets</a>
+                </div>  
+                <div class="sidebr">
+                    <img src="horaire.svg"class="imgicon">
+                    <a href="#">Horaires</a>
+                </div>
+                <div class="sidebr">   
+                    <img src="sauvegarde.svg"class="imgicon">
+                    <a href="#">Sauvegarde trajet</a>
+                </div>
+                <div class="sidebr">   
+                    <img src="aide.svg"class="imgicon">
+                    <a href="#">Aide</a>
+                </div>
+                <img src="xline.svg">
+                <div class=profile>
+                    <img src="avatar - Copie.svg" id="pic">
+                    <img src="medal.svg" class="medal">
+                    <p class="profile">Rosalina</p>
+                    <img src="flag.svg" class="flag">
+                </div>
+                <img src="xp.svg" id="xp">
+                <img src="points.svg" id="points">  
+            </div>
+                
+              <div id="main">
+                <button class="openbtn" onclick="openNav()"><img src="side.svg"> </button>
+              </div>
+                
+        
+<!--trouvé le code sur W3 school-->
+            <div class="map" id="mapid" style="width: 1200px; height: 600px"></div>
+
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+                <script type="text/javascript">
+                    var map = L.map('mapid').setView([51.505, -0.06], 20);
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
+                        }).addTo(map);
+                </script>
+<!--jusqu'ici-->           
+            <!--<div class="search">
+                <input type="search" id="search"value="Rechercher">
+                <button class="searchbutton"><img src="Search.svg"></button>
+            </div>-->
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top"> 
+           
+                <p class="follow">Suivez-nous</p>
+                <div class="follow-icons">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="instagramlogo.svg" class="instagramlogo" alt="Instagram logo in black and white">
+                    </a>                    
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="facebooklogo.svg" class="facebooklogo" alt="Facebook logo in black and white">
+                    </a>  
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="twitterlogo.svg" class="twitterlogo" alt="Twitter logo in black and white">
+                    </a>  
+                </div>                                     
+        </div>
+        <div class="nav-item">
+            <a href="http://127.0.0.1:5500/website.html" class="footernav">Accueil</a>
+            <a href="" class="footernav">Télécharger l'app</a>
+            <a href="" class="footernav">Partenaires</a>
+            <a href="" class="footernav">Boutique</a>
+            <a href="http://127.0.0.1:5500/apropos.html" class="footernav">À propos</a>
+            <a href="" class="footernav">Contacts</a>
+            <a href="" class="footernav">Mentions légales</a>
+            <p class="footernav">© Trabuzz 2023</p>
+        </div>
+       
+    </footer>
+
+</body>
+</html>
